@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sys_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sys_tb" />
+            <top_module name="systolic_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="185.001 ns"></ZoomEndTime>
+      <Cursor1Time time="185.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="454"></NameColumnWidth>
+      <ValueColumnWidth column_width="221"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject type="logic" fp_name="/sys_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sys_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sys_tb/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sys_tb/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sys_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/sys_tb/preload_done">
+      <obj_property name="ElementShortName">preload_done</obj_property>
+      <obj_property name="ObjectShortName">preload_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/A">
+      <obj_property name="ElementShortName">A[0:3][0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[0:3][0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/B">
+      <obj_property name="ElementShortName">B[0:3][0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[0:3][0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/expected_result">
+      <obj_property name="ElementShortName">expected_result[0:3][0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_result[0:3][0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/a_stream">
+      <obj_property name="ElementShortName">a_stream[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_stream[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/b_stream">
+      <obj_property name="ElementShortName">b_stream[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_stream[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/a_out">
+      <obj_property name="ElementShortName">a_out[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_out[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/b_out">
+      <obj_property name="ElementShortName">b_out[0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_out[0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/result">
+      <obj_property name="ElementShortName">result[0:3][0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[0:3][0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/dbg_a">
+      <obj_property name="ElementShortName">dbg_a[0:3][0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_a[0:3][0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/dbg_b">
+      <obj_property name="ElementShortName">dbg_b[0:3][0:3][15:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_b[0:3][0:3][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/dbg_psum">
+      <obj_property name="ElementShortName">dbg_psum[0:3][0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_psum[0:3][0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/dbg_enable_mac">
+      <obj_property name="ElementShortName">dbg_enable_mac[0:3][0:3]</obj_property>
+      <obj_property name="ObjectShortName">dbg_enable_mac[0:3][0:3]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/fd">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/cycle_count">
+      <obj_property name="ElementShortName">cycle_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/N">
+      <obj_property name="ElementShortName">N[31:0]</obj_property>
+      <obj_property name="ObjectShortName">N[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/DATA_W">
+      <obj_property name="ElementShortName">DATA_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/ACC_W">
+      <obj_property name="ElementShortName">ACC_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ACC_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sys_tb/FLOW_MODE">
+      <obj_property name="ElementShortName">FLOW_MODE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">FLOW_MODE[1:0]</obj_property>
+   </wvobject>
+</wave_config>
