@@ -1,0 +1,24 @@
+# Vivado execution logs and run outputs
+*.log
+*.jou
+*.pb
+*.str
+
+# Vivado simulation and project build directories
+.Xil/
+xsim.dir/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Simulation dumps and intermediate build files
+*.vcd
+*.wdb
+xvlog.pb
+xelab.pb
+
+# OS-generated files
+.DS_Store
+Thumbs.db
