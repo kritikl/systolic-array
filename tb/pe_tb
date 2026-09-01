@@ -1,0 +1,111 @@
+module pe_tb;
+
+    parameter int DATA_W = 16;
+    parameter int ACC_W  = 32;
+
+    logic clk;
+    logic reset;
+
+    logic signed [DATA_W-1:0] a_in;
+    logic signed [DATA_W-1:0] b_in;
+
+    logic signed [DATA_W-1:0] a_out;
+    logic signed [DATA_W-1:0] b_out;
+    logic signed [ACC_W-1:0]  result_out;
+
+    logic load_a;
+    logic load_b;
+    logic hold_a;
+    logic hold_b;
+    logic enable_mac;
+
+    pe #(
+        .DATA_W(DATA_W),
+        .ACC_W(ACC_W)
+    ) dut (
+        .clk(clk),
+        .reset(reset),
+        .a_in(a_in),
+        .b_in(b_in),
+        .a_out(a_out),
+        .b_out(b_out),
+        .result_out(result_out),
+        .load_a(load_a),
+        .load_b(load_b),
+        .hold_a(hold_a),
+        .hold_b(hold_b),
+        .enable_mac(enable_mac)
+    );
+
+    initial
+        clk = 0;
+
+    always #5 clk = ~clk;
+
+    initial begin
+
+        reset      = 1;
+        a_in        = 0;
+        b_in        = 0;
+        load_a      = 1;
+        load_b      = 1;
+        hold_a      = 0;
+        hold_b      = 0;
+        enable_mac  = 0;
+
+        repeat (2) @(posedge clk);
+        reset = 0;
+
+        a_in = 1;
+        b_in = 5;
+        enable_mac = 1;
+        @(posedge clk);
+
+        $display(
+            "a=%0d b=%0d result=%0d",
+            a_out,
+            b_out,
+            result_out
+        );
+
+        a_in = 2;
+        b_in = 7;
+        @(posedge clk);
+
+        $display(
+            "OS mode: a=%0d b=%0d result=%0d",
+            a_out,
+            b_out,
+            result_out
+        );
+
+        hold_b = 1;
+        a_in = 3;
+        b_in = 99;
+        @(posedge clk);
+
+        $display(
+            "WS mode: a=%0d b=%0d result=%0d",
+            a_out,
+            b_out,
+            result_out
+        );
+
+        hold_b = 0;
+        hold_a = 1;
+        a_in = 99;
+        b_in = 8;
+        @(posedge clk);
+
+        $display(
+            "IS mode: a=%0d b=%0d result=%0d",
+            a_out,
+            b_out,
+            result_out
+        );
+
+        $finish;
+
+    end
+
+endmodule
